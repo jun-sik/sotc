@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+       
+<tiles-definitions>
+	<definition name="default" template="/WEB-INF/jsp/layout/default.jsp">
+		<put-attribute name="title" value="십자가 위에서 웃다."/>
+		<put-attribute name="commonMeta" value="/WEB-INF/jsp/layout/commonMeta.jsp"/>
+		<put-attribute name="commonCss" value="/WEB-INF/jsp/layout/commonCss.jsp"/>
+		<put-attribute name="commonJs" value="/WEB-INF/jsp/layout/commonJs.jsp"/>
+<!-- 		<put-attribute name="header" value="/WEB-INF/jsp/layout/header.jsp"/> -->
+<!-- 		<put-attribute name="footer" value="/WEB-INF/jsp/layout/footer.jsp"/> -->
+	</definition>
+	
+	<definition name="*/*" extends="default">
+		<put-attribute name="privateJs" value="/WEB-INF/jsp/{1}/{2}Js.jsp"/>
+		<put-attribute name="privateJsp" value="/WEB-INF/jsp/{1}/{2}.jsp"/>
+	</definition>
+	
+	<definition name="logn/login" template="/WEB-INF/jsp/logn/login.jsp">
+		<put-attribute name="title" value="로그인"/>
+		<put-attribute name="commonMeta" value="/WEB-INF/jsp/layout/commonMeta.jsp"/>
+		<put-attribute name="commonCss" value="/WEB-INF/jsp/layout/commonCss.jsp"/>
+		<put-attribute name="commonJs" value="/WEB-INF/jsp/layout/commonJs.jsp"/>
+		<put-attribute name="privateJs" value="/WEB-INF/jsp/logn/loginJs.jsp"/>
+		<put-attribute name="privateJsp" value="/WEB-INF/jsp/logn/login.jsp"/>
+	</definition>
+</tiles-definitions>
