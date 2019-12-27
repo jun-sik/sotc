@@ -18,7 +18,7 @@
   	
   	<filter-mapping>
     	<filter-name>encodingFilter</filter-name>
-    	<url-pattern>*.json</url-pattern>
+    	<url-pattern>*.ajax</url-pattern>
   	</filter-mapping>
   	
 <!--   	<filter> -->
@@ -65,7 +65,7 @@
 	
 	<servlet-mapping>
 		<servlet-name>action</servlet-name>
-		<url-pattern>*.json</url-pattern>
+		<url-pattern>*.ajax</url-pattern>
 	</servlet-mapping>
 
 	<welcome-file-list>

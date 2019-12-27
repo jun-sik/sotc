@@ -151,6 +151,7 @@ iframe {
   line-height: 1.4;
   color: #00ad5f;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 /*==================================================================

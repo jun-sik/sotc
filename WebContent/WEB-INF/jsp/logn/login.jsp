@@ -4,11 +4,10 @@
 <html>
 	<head>
 		<title>
-<%-- 			<tiles:getAsString name="title"/> --%>
+			<tiles:getAsString name="title"/>
 		</title>
 		<tiles:insertAttribute name="commonMeta"/>
 		<tiles:insertAttribute name="commonCss"/>
-<%-- 		<link rel="stylesheet" type="text/css" href="${GLOBAL_PATH}/css/logn/login.css"> --%>
 		<tiles:insertAttribute name="commonJs"/>
 		<tiles:insertAttribute name="privateJs"/>
 	</head>
@@ -23,38 +22,33 @@
 						</span>
 						
 						<div class="wrap-input100 rs1-wrap-input100 validate-input m-b-20" data-validate="Type user name">
-						<input id="first-name" class="input100" type="text" name="username" placeholder="User name">
-						<span class="focus-input100"></span>
+							<input id="userId" class="input100" type="text" name="userId" placeholder="ID">
+							<span class="focus-input100"></span>
 						</div>
+						
 						<div class="wrap-input100 rs2-wrap-input100 validate-input m-b-20" data-validate="Type password">
-						<input class="input100" type="password" name="pass" placeholder="Password">
-						<span class="focus-input100"></span>
+							<input class="input100" type="password" id="userPwd" name="userPwd" placeholder="Password">
+							<span class="focus-input100"></span>
 						</div>
 						
 						<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-						Sign in
-						</button>
+							<button class="login100-form-btn" onClick="$.login.doLogin();">
+								<span>Log in</span>
+							</button>
 						</div>
 						
 						<div class="w-full text-center p-t-27 p-b-239">
-						<span class="txt1">
-						Forgot
-						</span>
+							<span class="txt1">Forgot</span>
 						
-						<a href="#" class="txt2">
-						User name / password?
-						</a>
+							<a href="#" class="txt2">ID / Password?</a>
 						</div>
 						
 						<div class="w-full text-center">
-						<a href="#" class="txt3">
-						Sign Up
-						</a>
+							<a class="txt3" onClick="$.login.doSignUp();">회원가입</a>
 						</div>
 					</form>
 				
-					<div class="login100-more" style="background-image: url('${GLOBAL_PATH}/WEB-INF/public/images/bg_jejus.jpg');"></div>
+					<div class="login100-more" style="background-image: url('${GLOBAL_PATH}/public/images/bg_jejus.jpg');"></div>
 				</div>
 			</div>
 		</div>
